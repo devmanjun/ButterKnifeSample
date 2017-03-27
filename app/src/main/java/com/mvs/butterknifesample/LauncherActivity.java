@@ -11,13 +11,13 @@ import butterknife.OnClick;
 
 
 public class LauncherActivity extends AppCompatActivity {
-    @BindView(R.id.tv_test) TextView sampleTextView;
+    @BindView(R.id.tv_test) TextView sampleTextView;//Binds textview to the variable
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
-        ButterKnife.bind(this);
+        ButterKnife.bind(this);//Initializes butter knife
         init();
 
     }
@@ -26,7 +26,7 @@ public class LauncherActivity extends AppCompatActivity {
         sampleTextView.setText("Test");
     }
 
-    @OnClick(R.id.bt_button)
+    @OnClick(R.id.bt_button)//No need for explicit call to @Bind button
     public void submitProcess()
     {
         Toast.makeText(LauncherActivity.this, "Button clicked", Toast.LENGTH_SHORT).show();
